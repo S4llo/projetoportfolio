@@ -1,0 +1,192 @@
+/* IMPORTAÇÃO DE FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* VARIÁVEIS DE CORES, TAMANHOS E TIPO DE FONTES */
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #8F46C2;
+    --cor-hover: #272727;
+    --cor-footer: #9370DB;
+    --fonte-primaria: 'Krona one', 'sans-serif';
+    --fonte-secundaria: 'Montserrat' , 'sans-serif';
+    --tamanho-fonte-titulo: 2rem;
+    --tamanho-fonte-subtitulo: 1.5rem;
+    --tamanho-fonte-paragrafo: 1.25rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* PAGINA HOME */
+body{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    /* height: 100vh; */
+    box-sizing: border-box;
+}
+
+.cabecalho{
+    margin: 2% 10%;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho_menu_links{
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-size: var(--tamanho-fonte-subtitulo);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+.apresentacao{
+    margin: 10% 8% 50% 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: var(--tamanho-fonte-titulo);
+    font-family: 'krona one', 'sanserif';
+    text-align: center;
+}
+
+.destaquetitulo{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__paragrafo{
+    font-size: var(--tamanho-fonte-subtitulo);
+    font-family: var(--fonte-secundaria);
+    text-align: justify;
+}
+
+.apresentacao__conteudo__redes{
+    font-size: var(--tamanho-fonte-subtitulo);
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+}
+
+.apresentacao__links__social{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: var(--tamanho-fonte-subtitulo);
+    padding: 3% 3%;
+    text-decoration: none; 
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+.apresentacao__links__social:hover{
+    background-color: var(--cor-hover);
+}
+
+.rodape{
+    background-color: var(--cor-footer);
+    color: var(--cor-primaria);
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: var(--tamanho-fonte-paragrafo)
+}
+
+/* OUTAS PAGINAS */
+
+.foto__de__perfil{
+    width: 30%;
+    height: 25%;
+    border-radius: 8%;
+    border: #9370DB solid;
+}
+
+.apresentacao__sobremim{
+    margin: 10% 15% 40% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.apresentacao__conteudo__sobremim{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__texto{
+    font-style: var(--fonte-secundaria);
+    font-size: var(--tamanho-fonte-paragrafo);
+    text-align: justify;
+}
+
+
+/* RESPONSIVIDADE */
+ @media(max-width: 1215px){
+    .cabecalho{
+        margin: 8%;
+        /* padding-top: 10%; */
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .apresentacao__sobremim{
+        width: auto;
+        flex-direction: column-reverse;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+    .foto__de__perfil{
+        width: 60%;
+    }
+    
+    .apresentacao__conteudo__sobremim{
+        width: auto;
+        padding: 10%;
+    }
+   
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    
+    .apresentacao__links__social{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+   
+ }
